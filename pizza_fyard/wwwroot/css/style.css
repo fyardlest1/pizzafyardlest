@@ -1,0 +1,78 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Ephesis&family=IM+Fell+English+SC&family=Roboto:wght@100&display=swap');
+
+body {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/images/menu_background_fyard.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    margin: 0px;
+    color: white;
+    /*background-attachment: scroll;*/
+}
+
+body.homePage {
+    background-image: url("/images/main_background.jpg");
+}
+
+.centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+a.homePage {
+    /*color: black;*/
+    font-size: 24px;
+    display: block;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.passion {
+    font-family: 'Ephesis', cursive;
+}
+
+li {
+    color: blue;
+}
+
+/*.small_logo {
+    margin-left: 35px;
+    margin-top: 25px;
+}*/
+
+.menu_pizzas {
+    font-family: 'Dancing Script', cursive;    
+    /*font-family: 'IM Fell English SC', serif;
+    font-family: 'Roboto', sans-serif;*/
+}
+
+.menu_pizzas h1 {
+    background-color: #DD7835C0;
+    /*font-family: 'Ephesis', cursive;
+    font-family: 'IM Fell English SC', serif;
+    font-family: 'Roboto', sans-serif;*/
+}
+
+.menu_list_price {
+    color: #DD7835;
+}
+
+.menu_list_ingredients {
+    color: #D8D8D8;
+    width: 350px;
+}
+
+.menu_list_badge {
+    color: black;
+    background-color: #DD7835;
+    border-radius: 8px;
+    font-size: 9px;
+    font-weight: bold;
+    padding: 3px 8px;
+}

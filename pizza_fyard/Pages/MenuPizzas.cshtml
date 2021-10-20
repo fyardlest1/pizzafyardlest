@@ -1,0 +1,47 @@
+﻿@page
+@model pizza_fyard.Pages.MenuPizzasModel
+@{
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Menu des pizzas</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/css/style.css" />
+</head>
+<body>
+    <a asp-page="Index">
+        <img src="~/images/small_logo.png" class="small_logo ms-4 mt-4 mb-4" />
+    </a>
+    <div class="menu_pizzas mt-4 mb-4 pb-4">
+        <h1 class="display-2 d-inline fw-bold p-3 text-info">Les Pizzas</h1>
+    </div>    
+
+    <div class="menu_list ms-5">
+        @foreach (var pizza in Model.Pizza)
+        {
+        <div class="pb-2">
+            <div class="menu_list_item fs-4">
+                <span class="menu_list_title">@pizza.name</span>
+                <span class="menu_list_price ms-2">$@String.Format("{0:0.00}", pizza.price)</span>
+            </div>
+            <div class="menu_list_ingredients fs-6">
+                @pizza.ingredients
+            </div>
+            @if (pizza.vegan)
+            {
+                <span class="menu_list_badge">VEGETARIENNE</span>
+            }
+        </div>
+        }
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="" async defer></script>
+</body>
+</html>
