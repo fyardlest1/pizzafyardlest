@@ -11,12 +11,16 @@ namespace pizza_fyard.Models
     {
         [JsonIgnore]
         public int PizzaID { get; set; }
+
         [Display(Name = "Nom")]
         public string name { get; set; }
+
         [Display(Name = "Prix ($)")]
         public float price { get; set; }
+
         [Display(Name = "Végétarienne")]
         public bool vegan { get; set; }
+
         [Display(Name = "Ingrédients")]
         [JsonIgnore]
         public string ingredients { get; set; }
